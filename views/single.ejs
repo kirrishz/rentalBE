@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Bike Booking page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css files -->
+
+    <link href="css/css_slider.css" type="text/css" rel="stylesheet" media="all"><!-- slider css -->
+      <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+      <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+      <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!-- //css files -->
+    <style type="text/css">
+
+/*****************globals*************/
+body {
+  font-family: 'open sans';
+  overflow-x: hidden; }
+
+img {
+  max-width: 100%; }
+
+.preview {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media screen and (max-width: 996px) {
+    .preview {
+      margin-bottom: 20px; } }
+
+
+.tab-content {
+  overflow: hidden; }
+  .tab-content img {
+    width: 100%;
+    -webkit-animation-name: opacity;
+            animation-name: opacity;
+    -webkit-animation-duration: .3s;
+            animation-duration: .3s; }
+
+.review-no{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card {
+  margin-top: 100px;
+  background: #eee;
+  padding: 3em;
+  line-height: 1.5em; }
+
+@media screen and (min-width: 997px) {
+  .wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
+
+.details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.colors {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.product-title, .price, .sizes, .colors {
+  text-transform: UPPERCASE;
+  font-weight: bold; }
+
+.checked, .price span {
+  color: #ff9f1a; }
+
+.product-title, .rating, .product-description, .price, .vote, .sizes {
+  margin-bottom: 15px; }
+
+.product-title {
+  margin-top: 0; }
+
+.size {
+  margin-right: 10px; }
+  .size:first-of-type {
+    margin-left: 40px; }
+
+.color {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  height: 2em;
+  width: 2em;
+  border-radius: 2px; }
+
+  .color:first-of-type {
+    margin-left: 20px; }
+
+.add-to-cart, .like {
+  background: #ef4e65;
+  padding: 0.8em 1.5em;
+  border: none;
+  text-transform: UPPERCASE;
+  font-weight: bold;
+  color: #fff;
+  -webkit-transition: background .3s ease;
+          transition: background .3s ease; }
+  .add-to-cart:hover, .like:hover {
+    background: #bd3c4f;
+    color: #fff; }
+
+.not-available {
+  text-align: center;
+  line-height: 2em; }
+  .not-available:before {
+    font-family: fontawesome;
+    content: "\f00d";
+    color: #fff; }
+
+.orange {
+  background: #ff9f1a; }
+
+.green {
+  background: #85ad00; }
+
+.blue {
+  background: #0076ad; }
+
+.tooltip-inner {
+  padding: 1.3em; }
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+/*# sourceMappingURL=style.css.map */
+    </style>
+
+</head>
+<body>
+
+  <!-- //header -->
+  <header class="py-3">
+  	<div class="container-fluid ">
+      	<div id="logo">
+      <a class=" " href="index.html">
+        <img src="images/lg.png"  alt="logo" style="width:60px;">
+        <span class="">Fernweh</span>
+      </a>
+      </div>
+
+  		<!-- nav -->
+  		<nav class="d-lg-flex1 ">
+
+  			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+  			<input type="checkbox" id="drop" />
+  			<ul class="menu mt-2 ml-auto">
+  				<li class="active"><a href="./">Home</a></li>
+          <li class=""><a href="/blog">List of Bikes</a></li>
+          <li class=""><a href="/host">Become a host</a></li>
+  				<li class=""><a href="/about">About Us</a></li>
+
+  				<li class=""><a href="/contact">Contact Us</a></li>
+
+          <% if(user){ %>
+        <!--Welcome...!!--><li><a href=""><span class="glyphicon glyphicon-user"></span>
+        <% if (user.twitter.username != null) { %>
+        <%= user.twitter.username %>
+        <% } else if (user.google.email != null) { %>
+        <%= user.google.email %>
+        <% } else if (user.facebook.name  != null)  { %>
+        <%= user.facebook.name  %>
+        <% } else { %>
+        <%= user.local.lastname %>
+        <% } %>
+        </a>
+        </li>
+         <li><a href="/logout"><i class="fa fa-sign-out"> Logout</a></i>
+         <% } else{ %>
+        	<li class=""><a href="/login"><span class="fa fa-lock fa-lg"></span> Login</a></li>
+        	<li class=""><a href="/signup"><span class="fa fa-user fa-lg"></span> Sign Up</a></li>
+          <% } %>
+        </ul>
+  			<div class="login-icon ml-2">
+  				<a class="user" href="/blog"> Book Now</a>
+  			</div>
+  		</nav>
+  		<div class="clear"></div>
+  		<!-- //nav -->
+  	</div>
+  </header>
+
+  <!-- //header -->
+
+
+
+	<div class="container">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+						<div class="preview-pic tab-content">
+						  <div class="tab-pane active" id="pic-1"><img src="images/bk1.png" /></div>
+						</div>
+					</div>
+					<div class="details col-md-6">
+						<h3 class="product-title">Pulsar Ns200</h3>
+						<div class="rating">
+							<div class="stars">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star"></span>
+								<span class="fa fa-star"></span>
+							</div>
+							<span class="review-no">41 reviews</span>
+						</div>
+						<p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
+              <table class="review-no">
+                <tr>
+                  <th>Booking date : <input type="date" class="btn btnn"></th>
+
+                </tr>
+                <tr>
+                  <th class="">Return date &nbsp&nbsp : <input type="date" class="btn btnn"></th>
+
+
+                </tr>
+                <tr>
+                  <th>Location &emsp;&emsp; :
+                    <select name="cars" class="btnn btn">
+                    <option value="Jaffna">Jaffna</option>
+                    <option value="Colombo">Colombo</option>
+                    <option value="Kilinochi">Kilinochi</option>
+                    <option value="Trincomalee">Trincomalee</option>
+                  </select>
+                </th>
+                  <td>
+
+                  </td>
+
+                </tr>
+              </table>
+
+						<h4 class="price">Booking price: <span>lkr 2500</span></h4>
+
+						<div class="action">
+							<button class="add-to-cart btn btn-default" type="button">CONFIRM BOOKING</button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

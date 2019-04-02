@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon.ico">
+
+	<title>Login</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+	<!-- CSS Files -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="assets/css/material-bootstrap-wizard.css" rel="stylesheet" />
+
+	<!-- CSS Just for demo purpose, don't include it in your project -->
+
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="image-container set-full-height" style="background-image: url('images/bg2.jpg')">
+		<!-- //header -->
+		<header class="py-3">
+			<div class="container-fluid ">
+					<div id="logo">
+				<a class=" " href="./">
+					<img src="images/lg.png"  alt="logo" style="width:60px;">
+					<span class="">Fernweh</span>
+				</a>
+				</div>
+
+				<!-- nav -->
+				<nav class="d-lg-flex1 ">
+
+					<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+					<input type="checkbox" id="drop" />
+					<ul class="menu mt-2 ml-auto">
+						<li class="active"><a href="./">Home</a></li>
+						<li class=""><a href="/blog">List of Bikes</a></li>
+						<li class=""><a href="/host">Become a host</a></li>
+						<li class=""><a href="/about">About Us</a></li>
+						<li class=""><a href="/contact">Contact Us</a></li>
+						<li><a href="/login" ><span class="fa fa-lock fa-lg"></span> Login</a></li>
+						<li><a href="/signup" ><span class="fa fa-user fa-lg"></span> Sign Up</a></li>
+					</ul>
+					<div class="login-icon ml-2">
+						<a class="user" href="contact.html"> Book Now</a>
+					</div>
+				</nav>
+				<div class="clear"></div>
+				<!-- //nav -->
+			</div>
+		</header>
+
+
+
+	    <!--   Big container   -->
+	    <div class="container">
+	        <div class="row">
+		        <div class="col-sm-4 col-sm-offset-0">
+		            <!--      Wizard container        -->
+		            <div class="wizard-container">
+		                <div class="card wizard-card" data-color="green" id="wizardProfile">
+		                    <form action="/login" method="post">
+		                <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
+
+		                    	<div class="wizard-header">
+		                        	<!-- <h3 class="wizard-title">
+		                        	   Login Your Profile
+		                        	</h3>
+								    				<h5>This information will let us know more about you.</h5> -->
+		                    	</div>
+													<div class="wizard-navigation">
+											 			<ul>
+						                  <li><a href="#about" data-toggle="tab">Login</a></li>
+															<% if (message.length > 0) { %>
+																	<div class="alert alert-danger"><%= message %></div>
+															<% } %>
+
+						                </ul>
+													</div>
+
+		                        <div class="tab-content">
+		                            <div class="tab-pane" id="about">
+		                              <div class="row">
+
+
+					<!--//////////////////// Image input start //////////////////////-->
+																			<div class="col-sm-12 ">
+		                                    	<div class="picture-container">
+		                                        	<div class="picture">
+                                        				<img src="images/lg.png" class="picture-src" id="wizardPicturePreview" title=""/>
+		                                            	<input type="file" id="wizard-picture">
+		                                        	</div>
+		                                        	<h6></h6>
+		                                    	</div>
+		                                	</div>
+			   <!--//////////////////// Image input End //////////////////////-->
+
+				 <!--////////////////////  input Item Start //////////////////////-->
+
+
+																			<div class="col-sm-12">
+																				<div class="input-group">
+																					<span class="input-group-addon">
+																						<i class="material-icons">email</i>
+																					</span>
+																				  	<div class="form-group label-floating">
+											                       <label class="control-label">Email <small>(required)</small></label>
+											                       <input name="email" type="email" class="form-control">
+											                     </div>
+																			 	</div>
+		                                	</div>
+																			<div class="col-sm-12">
+																				<div class="input-group">
+																					<span class="input-group-addon">
+																						<i class="material-icons">vpn_key</i>
+																					</span>
+																				  	<div class="form-group label-floating">
+											                       <label class="control-label">Password <small>(required)</small></label>
+											                       <input name="password" type="password" class="form-control">
+											                     </div>
+																			 	</div>
+		                                	</div>
+
+						<!--////////////////////  input Item End //////////////////////-->
+
+																</div>
+
+
+
+															</div>
+		                        </div>
+		                        <div class="wizard-footer">
+		                            <div class="clearfix col-sm-offset-0">
+																<center>	<span>Create an account?</span>
+					                        <a href="">Signup</a>	</center>
+																</div>
+																<div class="">
+																	 <input type="submit" class='btn btn-finish btn-fill btn-success btn-wd' name='submit' value='Login' />
+															 </div>
+		                        </div>
+		                    </form>
+		                </div>
+		            </div> <!-- wizard container -->
+		        </div>
+	        </div><!-- end row -->
+	    </div> <!--  big container end-->
+
+	    <div class="footer">
+	        <div class="container text-center">
+	             Made with <i class="fa fa-heart heart"></i> by <a href="">Fernweh</a>
+	        </div>
+	    </div>
+	</div>
+
+</body>
+	<!--   Core JS Files   -->
+    <script src="assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/js/jquery.bootstrap.js" type="text/javascript"></script>
+
+	<!--  Plugin for the Wizard -->
+	<script src="assets/js/material-bootstrap-wizard.js"></script>
+
+    <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+	<script src="assets/js/jquery.validate.min.js"></script>
+
+</html>

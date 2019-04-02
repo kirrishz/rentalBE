@@ -1,0 +1,353 @@
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>About</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Dental Health Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+
+	<!-- css files -->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<!-- //css files -->
+
+	<!-- google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+	<!-- //google fonts -->
+
+</head>
+<body>
+
+<!-- top header -->
+
+<!-- //header -->
+<header class="py-3">
+	<div class="container-fluid ">
+    	<div id="logo">
+    <a class=" " href="./">
+      <img src="images/lg.png"  alt="logo" style="width:60px;">
+      <span class="">Fernweh</span>
+    </a>
+    </div>
+
+		<!-- nav -->
+		<nav class="d-lg-flex1 ">
+
+			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+			<input type="checkbox" id="drop" />
+			<ul class="menu mt-2 ml-auto">
+				<li class="active"><a href="./">Home</a></li>
+        <li class=""><a href="/blog">List of Bikes</a></li>
+        <li class=""><a href="/host">Become a host</a></li>
+				<li class=""><a href="/about">About Us</a></li>
+
+				<li class=""><a href="/contact">Contact Us</a></li>
+
+        <% if(user){ %>
+      <!--Welcome...!!--><li><a href=""><span class="glyphicon glyphicon-user"></span>
+      <% if (user.twitter.username != null) { %>
+      <%= user.twitter.username %>
+      <% } else if (user.google.email != null) { %>
+      <%= user.google.email %>
+      <% } else if (user.facebook.name  != null)  { %>
+      <%= user.facebook.name  %>
+      <% } else { %>
+      <%= user.local.lastname %>
+      <% } %>
+      </a>
+      </li>
+       <li><a href="/logout"><i class="fa fa-sign-out"> Logout</a></i>
+       <% } else{ %>
+      	<li class=""><a href="/login"><span class="fa fa-lock fa-lg"></span> Login</a></li>
+      	<li class=""><a href="/signup"><span class="fa fa-user fa-lg"></span> Sign Up</a></li>
+        <% } %>
+      </ul>
+			<div class="login-icon ml-2">
+				<a class="user" href="/blog"> Book Now</a>
+			</div>
+		</nav>
+		<div class="clear"></div>
+		<!-- //nav -->
+	</div>
+</header>
+
+<!-- //header -->
+
+
+<!-- banner -->
+<div class="innerpage-banner1" id="home">
+	<div class="inner-page-layer1">
+	</div>
+</div>
+<!-- //banner -->
+
+<!-- about -->
+<section class="about py-5">
+	<div class="container py-md-3">
+		<h2 class="heading text-center mb-sm-5 mb-4">About Us </h2>
+		<div class="row">
+			<div class="col-lg-8">
+				<h4 class="about-left">Quality Rental services</h4>
+				<p class="mt-sm-4 mt-3">Enjoy your freedom with fernweh.lk! We are fernweh.lk and we provide an easy way to organise hiring
+          a motorbike while you are in Sri Lanka. We give customers easy and affordable alternatives for travelling, including young tourists who
+           like to organize and travel by themselves without any travel agent or guide. We also create an opportunity for local people to earn money from renting out their own vehicles which are not being used.</p>
+				<div class="row mt-4">
+				
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-8 dental">
+				<img src="images/lg.png" class="img-fluid" alt="" />
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //about -->
+
+<!-- about bottom -->
+<section class="about-bottom pb-5">
+	<div class="container pb-lg-3">
+		<div class="row bottom-grids">
+			<div class="col-lg-6">
+				<img src="images/pr.png" class="img-fluid" alt="" />
+			</div>
+			<div class="col-lg-6 mt-lg-0 mt-5">
+				<h4>Routine Dental Exams and Check ups at 30$.</h4>
+				<p class="py-3">Suspendisse id felis sed felis tincidunt finibus. Nulla sed in justo inter tellus. Donec ut felis ante. Quisque acin sapien
+				quis orci pulvinar finibus quis urna. onec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac quis eu urna Quisque quis eu urna lorem elit.</p>
+				<p class="">Quisque ac sapien quis orci pulvinar finibus quis eu urna Quisque Suspendisse id felis sed felis tincidunt finibus.
+				Nulla sed justo tellus. Donec ut felis ante ipsum.</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //about bottom -->
+
+<!-- Doctors -->
+<section class="trainers pt-5">
+	<div class="container py-md-3">
+		<h3 class="heading text-center mb-5">Our Team </h3>
+		 <div class="row team_grids mt-5">
+			<div class="col-lg-3 col-sm-6 mb-5">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="images/1.jpg" alt="team member" class="img-fluid">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hipster</h4>
+							<p>UI, UX, Front-end, Marketing.</p>
+						</div>
+						<div class="s-link">
+							<a href="#">
+								<span class="fa fa-facebook"></span>
+							</a>
+							<a href="#">
+								<span class="fa fa-twitter"></span>
+							</a>
+							<a href="#">
+								<span class="fa fa-google-plus"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="team-title">
+					<h5>Jathurshan Manistar</h5>
+					<span>Hipster</span>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 mb-5">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="images/2.jpg" alt="team member" class="img-fluid">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hacker</h4>
+							<p>Dev/coding, Back-end.</p>
+						</div>
+						<div class="s-link">
+							<a href="#">
+								<span class="fa fa-facebook"></span>
+							</a>
+							<a href="#">
+								<span class="fa fa-twitter"></span>
+							</a>
+							<a href="#">
+								<span class="fa fa-google-plus"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="team-title">
+					<h5>Kirishanth Sripathy</h5>
+					<span>Hacker</span>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 mx-auto mb-5">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="images/3.jpg" alt="team member" class="img-fluid">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hound</h4>
+							<p>Primary, Secondary researcher.</p>
+						</div>
+						<div class="s-link">
+							<a href="#">
+								<span class="fa fa-facebook"></span>
+							</a>
+							<a href="#">
+								<span class="fa fa-twitter"></span>
+							</a>
+							<a href="#">
+								<span class="fa fa-google-plus"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="team-title">
+					<h5>Mithula Rameshkumar</h5>
+					<span>Hound</span>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 mx-auto mb-5">
+				<div class="team-member">
+					<div class="team-img">
+						<img src="images/4.jpg" alt="team member" class="img-fluid">
+					</div>
+					<div class="team-hover">
+						<div class="desk">
+							<h4>Hustler</h4>
+							<p>Pitching, Sales,Financial developer.</p>
+						</div>
+						<div class="s-link">
+							<a href="#">
+								<span class="fa fa-facebook"></span>
+							</a>
+							<a href="#">
+								<span class="fa fa-twitter"></span>
+							</a>
+							<a href="#">
+								<span class="fa fa-google-plus"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="team-title">
+					<h5>Araphi Jegatheswaran</h5>
+					<span>Hustler</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //Doctors -->
+
+<!-- appointment -->
+<section class="appointment text-center py-5">
+	<div class="container py-sm-3">
+		<h4>make your dream smile a reality</h4>
+		<p class="mt-3">Call Us To Book Your Bikes Today</p>
+		<a href="contact.html">Book a Bike</a>
+	</div>
+</section>
+<!-- //appointment -->
+
+<!-- footer -->
+<footer class="py-5">
+	<div class="container py-sm-3">
+		<div class="row footer-grids">
+			<div class="col-lg-3 col-sm-6 mb-lg-0 mb-sm-5 mb-4">
+				<h4 class="mb-sm-4 mb-3"><span class="fa fa-stethoscope"></span> Dental Health</h4>
+				<p class="mb-3">Onec Consequat sapien ut cursus rhoncus. Nullam dui mi, vulputate ac metus semper quis luctus sed.</p>
+				<h5>Trusted by <span>500+ People</span> </h5>
+			</div>
+			<div class="col-lg-3 col-sm-6 mb-lg-0 mb-sm-5 mb-4">
+				<h4 class="mb-sm-4 mb-3">Address Info</h4>
+				<p><span class="fa mr-2 fa-map-marker"></span>64d canal street TT 3356 <span>Newyork, NY.</span></p>
+				<p class="phone py-2"><span class="fa mr-2 fa-phone"></span> +1(12) 123 456 789 </p>
+				<p><span class="fa mr-2 fa-envelope"></span><a href="mailto:info@example.com">info@example.com</a></p>
+			</div>
+			<div class="col-lg-2 col-sm-6 mb-sm-0 mb-4">
+				<h4 class="mb-sm-4 mb-3">Quick Links</h4>
+				<ul>
+					<li><a href="#">Terms & Conditions</a></li>
+					<li class="my-2"><a href="#">Support Helpline</a></li>
+					<li><a href="#">Healthy Tips</a></li>
+					<li class="mt-2"><a href="#">Privacy Ploicy</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-4 col-sm-6">
+				<h4 class="mb-sm-4 mb-3">Subscribe Us</h4>
+				<p class="mb-3">Subscribe to our newsletter</p>
+				<form action="#" method="post" class="d-flex">
+					<input type="email" id="email" name="EMAIL" placeholder="Enter your email here" required="">
+					<button type="submit" class="btn">Subscribe</button>
+				</form>
+				<div class="icon-social mt-3">
+					<a href="#" class="button-footr">
+						<span class="fa mx-2 fa-facebook"></span>
+					</a>
+					<a href="#" class="button-footr">
+						<span class="fa mx-2 fa-twitter"></span>
+					</a>
+					<a href="#" class="button-footr">
+						<span class="fa mx-2 fa-dribbble"></span>
+					</a>
+					<a href="#" class="button-footr">
+						<span class="fa mx-2 fa-pinterest"></span>
+					</a>
+					<a href="#" class="button-footr">
+						<span class="fa mx-2 fa-google-plus"></span>
+					</a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- //footer -->
+
+<!-- copyright -->
+<div class="copyright">
+	<div class="container py-4">
+		<div class=" text-center">
+			<p>© 2019 Dental Health. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a> </p>
+		</div>
+	</div>
+</div>
+<!-- //copyright -->
+
+<!-- move top -->
+<div class="move-top text-right">
+	<a href="#home" class="move-top">
+		<span class="fa fa-angle-up  mb-3" aria-hidden="true"></span>
+	</a>
+</div>
+<!-- move top -->
+
+</body>
+</html>
