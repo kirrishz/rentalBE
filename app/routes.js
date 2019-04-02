@@ -215,15 +215,15 @@ module.exports = function(app, passport) {
                     var transporter = nodemailer.createTransport({
                      service: 'gmail',
                      auth: {
-                            user: 'manmoney950@gmail.com',
+                            user: 'fernwehrental@gmail.com',
                             pass: 'pretty1998'
                         }
                     });
                     var user = req.user
                     var name = user.local.lastname
                     const mailOptions = {
-                      from: 'manmoney950@gmail.com',// sender address
-                      to: 'manmoney950@gmail.com', // list of receivers
+                      from: 'fernwehrental@gmail.com',// sender address
+                      to: 'fernwehrental@gmail.com', // list of receivers
                       subject: ' New Fernweh Registration Details', // Subject line
                       html: '<div style="background-color:#eeeeef;padding:50px 0"><table style="width:540px" border="0" cellspacing="0" cellpadding="0" align="center"><tbody><tr><td style="padding:40px 30px 30px 30px" align="center" bgcolor="#33333e"><h1 style="color:#fff">Team Fernweh,<br>Register Successfully. </h1></td></tr><tr><td bgcolor="#ffffff" style="padding:40px 30px 40px 30px"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td width="260" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>Hello ' + name + '! We got a Two wheeler registered  from you. please check in your dashboard</td></tr><tr><td style="padding:10px 0 0 0">Two wheeler id: '+newhost.carId+  '</td></tr><tr><td style="padding:10px 0 0 0">First name: '+user.local.firstname+ '</td></tr><tr><td style="padding:10px 0 0 0">Last name: '+ user.local.lastname+ '</td></tr><tr><td style="padding:10px 0 0 0">Email: '+newhost.email+ '</td></tr><tr><td style="padding:10px 0 0 0">Phone number: '+newhost.phonenumber+ '</td></tr><tr><td style="padding:10px 0 0 0">Address: '+newhost.address+ '</td></tr><tr><td style="padding:10px 0 0 0">Nic/passport: '+newhost.nic+ '</td></tr><tr><td style="padding:10px 0 0 0">From this date: '+newhost.fdate+ '</td></tr><tr><td style="padding:10px 0 0 0">Until this date: ' +newhost.udate+ '</td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td align="center" bgcolor="#fff"><h3>Thank you<br/>Fernweh Team</h3></td></tr><tr><td style="background-color:#ffffff;padding:30px 30px 30px 30px"><table border="0" width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td style="font-family:Arial,sans-serif;font-size:14px">® Fernweh, 2019</td></tr></tbody></table></td></tr></tbody></table></div>' // plain text body
                     };
@@ -250,7 +250,7 @@ module.exports = function(app, passport) {
                                     var transporter = nodemailer.createTransport({
                                      service: 'gmail',
                                      auth: {
-                                            user: 'manmoney950@gmail.com',
+                                            user: 'fernwehrental@gmail.com',
                                             pass: 'pretty1998'
                                         }
                                     });
@@ -259,11 +259,10 @@ module.exports = function(app, passport) {
 
                                     const mailOptions = {
 
-                                      from: 'manmoney950@gmail.com', // sender address
+                                      from: 'fernwehrental@gmail.com', // sender address
                                       to: user.local.email, // list of receivers
                                       subject: 'Fernweh Registration Details', // Subject line
-                                      html: '<p>Hi ' + user.local.lastname + ', <br/><br/> Your order has been palced successfully. We will contact you about the order as soon as possible. <br/><br/> This is a system generated email and please do not reply. For more information please contact to 0777777777 <br/><br/> Car order deatils- <br/>  Car id: '+newhost.carId+  '<br/>First name: '+user.local.firstname+ '<br/>Last name: '+ user.local.lastname+ '<br/>Email: '+newhost.email+
-                                      '<br/>Phone number: '+newhost.phonenumber+ '<br/>address: '+newhost.address+ '<br/>Nic/passport: '+newhost.nic+ '<br/>From this date: '+newhost.fdate+ '<br/>Until this date: ' +newhost.udate+ '<br/><br/> Thank you<br/>Fernweh </p>'// plain text body
+                                      html: '<div style="background-color:#eeeeef;padding:50px 0"><table style="width:540px" border="0" cellspacing="0" cellpadding="0" align="center"><tbody><tr><td style="padding:10px 30px 10px 30px" align="center" bgcolor="#33333e"><h1 style="color:#fff">Hi ' + user.local.lastname + ',</h1><h2 style="color:#fff">Your order has been palced successfully. We will contact you about the order as soon as possible. </h2></td></tr><tr><td bgcolor="#ffffff" style="padding:40px 30px 10px 30px"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td width="260" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td>This is a system generated email and please do not reply. For more information please contact to +94 77 851 3071 .</td></tr><h3 style="text-align:center;"> Two wheeler Order Deatils </h3><tr><td style="padding:10px 0 0 0">Two wheeler id: '+newhost.carId+  '</td></tr><tr><td style="padding:10px 0 0 0">First name: '+user.local.firstname+ '</td></tr><tr><td style="padding:10px 0 0 0">Last name: '+ user.local.lastname+ '</td></tr><tr><td style="padding:10px 0 0 0">Email: '+newhost.email+ '</td></tr><tr><td style="padding:10px 0 0 0">Phone number: '+newhost.phonenumber+ '</td></tr><tr><td style="padding:10px 0 0 0">Address: '+newhost.address+ '</td></tr><tr><td style="padding:10px 0 0 0">Nic/passport: '+newhost.nic+ '</td></tr><tr><td style="padding:10px 0 0 0">From this date: '+newhost.fdate+ '</td></tr><tr><td style="padding:10px 0 0 0">Until this date: ' +newhost.udate+ '</td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td align="center" bgcolor="#fff"><h3>Thank you<br/>Fernweh Team</h3></td></tr><tr><td style="background-color:#33333d;padding:20px 30px 20px 30px"><table border="0" width="100%" cellspacing="0" cellpadding="0"><tbody><tr><td style="font-family:Arial,sans-serif;font-size:14px;color:#fff">® Fernweh, 2019</td></tr></tbody></table></td></tr></tbody></table></div>' // plain text body
                                     };
                                     transporter.sendMail(mailOptions, function (err, info) {
                                        if(err)
