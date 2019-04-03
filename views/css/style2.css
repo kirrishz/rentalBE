@@ -1,0 +1,161 @@
+.service_area{
+	padding:40px 0px 40px;
+	}
+
+  .service_block{
+  	text-align:center;
+  	padding-left: 15px;
+      padding-right: 15px;
+  	}
+    .service_block h3{
+    	font-family: 'Open Sans', sans-serif; 'Dosis';
+    	font-weight: 600;
+    	font-size:18px;
+    	color:#111111;
+    	margin:35px 0 18px;
+	}
+.black{
+	color: #222;
+	font-size: 40px;
+	text-align:center;
+}
+    .service_block p{
+    	font-size:16px;
+    	color:#888888;
+    	margin:0px;
+}
+
+.service_icon{
+border:2px solid #f56eab;
+border-radius:50%;
+width:90px;
+height:90px;
+margin:0px auto 25px;
+}
+
+.service_icon.icon2{
+border:2px solid #7cc576;
+}
+
+.service_icon.icon3{
+border:2px solid #49b5e7;
+}
+
+.service_icon span {
+  background:#f56eab;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.service_icon.icon2 span {
+  background:#7cc576;
+}
+.service_icon.icon3 span{
+  background:#49b5e7;
+}
+.service_icon i{
+color: #fff;
+  font-size: 40px;
+  margin-top: 0;
+  position: relative;
+  top: 14px;
+  z-index: 20;
+}
+
+#service{
+	padding:30px 0px 0px 0px;
+	}
+	#service1{
+		padding:0px 0px 30px 0px;
+		}
+
+
+.service_section{
+	}
+
+.service_block{
+	text-align:center;
+	padding-left: 15px;
+    padding-right: 15px;
+	}
+
+.service_icon{
+	border:2px solid #f56eab;
+	border-radius:50%;
+	width:90px;
+	height:90px;
+	margin:0px auto 25px;
+	}
+
+.service_icon.icon2{
+	border:2px solid #7cc576;
+	}
+
+.service_icon.icon3{
+	border:2px solid #49b5e7;
+	}
+
+.service_icon span {
+    background:#f56eab;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.service_icon.icon2 span {
+    background:#7cc576;
+}
+.service_icon.icon3 span{
+    background:#49b5e7;
+	}
+.service_icon i{
+	color: #fff;
+    font-size: 40px;
+    margin-top: 0;
+    position: relative;
+    top: 14px;
+    z-index: 20;
+	}
+
+.service_block h3{
+	font-family: 'Open Sans', sans-serif; 'Dosis';
+	font-weight: 600;
+	font-size:18px;
+	color:#111111;
+	margin:35px 0 18px;
+	}
+
+.service_block p{
+	font-size:16px;
+	color:#888888;
+	margin:0px;
+	}
+
+  .service-list{
+  	padding:0 0 0 0;
+  	font-size:14px;
+  	margin-bottom:40px;
+  }
+  .service-list-col1{
+  	float:left;
+  	width:60px;
+  	text-align:center;
+  }
+  .service-list-col1 i{
+  	display:;
+  	color:#888;
+  	font-family: 'Open Sans', sans-serif; 'linecons';
+  	font-size: 19px;
+      font-style: normal;
+      line-height: 20px;
+  }
+  .service-list-col2{
+  	overflow:hidden;
+  }
+.delay-03s {
+	animation-delay: 0.3s;
+	-webkit-animation-delay: 0.3s;
+}

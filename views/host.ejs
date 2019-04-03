@@ -62,7 +62,7 @@
 				<% } %>
 				</a>
 				</li>
-				 <li><a href="/logout"><i class="fa fa-sign-out"> Logout</a></i>
+				 <li><a href="/logout"><span class="fa fa-sign-out"></span> Logout</a></li>
 				 <% } else{ %>
 					<li class=""><a href="/login"><span class="fa fa-lock fa-lg"></span> Login</a></li>
 					<li class=""><a href="/signup"><span class="fa fa-user fa-lg"></span> Sign Up</a></li>
@@ -123,7 +123,7 @@
 			                            	<div class="col-sm-12">
 			                                	<h4 class="info-text"> Let's start with the basic details.</h4>
 			                            	</div>
-		                  <div class="col-sm-6">
+		                                	<div class="col-sm-6">
 												<div class="input-group">
 													<span class="input-group-addon">
 														<i class="material-icons">account_circle</i>
@@ -226,12 +226,12 @@
 															</div>
 
 
-		                            <div class="tab-pane" id="captain">
+		                            <div class="tab-pane" id="captain" >
 		                                <h4 class="info-text">What type of two wheeler would you rent? </h4>
 		                                <div class="row">
 		                                    <div class="col-sm-10 col-sm-offset-1">
 		                                        <div class="col-sm-6">
-		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="This is good if you travel alone.">
+		                                            <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="this is good if you are coming with your partner.">
 		                                                <input type="radio" name="job" value="Design">
 		                                                <div class="icon">
 		                                                    <i class="material-icons">motorcycle</i>
@@ -239,9 +239,8 @@
 		                                                <h6>Motor Bike</h6>
 		                                            </div>
 		                                        </div>
-
 										      		<div class="col-sm-6">
-		                               <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="Select this option if you are coming with your partner.">
+		                               <div class="choice" data-toggle="wizard-radio" rel="tooltip" title="This is good if you travel alone.">
 		                                   <input type="radio" name="job" value="Code">
 		                                    <div class="icon">
 		                                     <i class="material-icons">directions_bike</i>
@@ -252,6 +251,7 @@
 		                                    </div>
 		                                </div>
 		                            </div>
+
 		                            <div class="tab-pane" id="description">
 		                                <div class="row">
 		                                    <h4 class="info-text"> Drop us a important details.</h4>

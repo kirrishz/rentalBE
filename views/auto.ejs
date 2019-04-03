@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Dental Health Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+  Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+      <script>
+          addEventListener("load", function () {
+              setTimeout(hideURLbar, 0);
+          }, false);
+
+          function hideURLbar() {
+              window.scrollTo(0, 1);
+          }
+      </script>
+
+  	<!-- css files -->
+      <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+      <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+      <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  	<!-- //css files -->
+
+  	<!-- google fonts -->
+  	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+  	<link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+  	<!-- //google fonts -->
+
+</head>
+<body>
+  <!-- //header -->
+  <header class="py-3">
+  	<div class="container-fluid ">
+      	<div id="logo">
+      <a class=" " href="./">
+        <img src="images/lg.png"  alt="logo" style="width:60px;">
+        <span class="">Fernweh</span>
+      </a>
+      </div>
+
+  		<!-- nav -->
+  		<nav class="d-lg-flex1 ">
+
+  			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+  			<input type="checkbox" id="drop" />
+  			<ul class="menu mt-2 ml-auto">
+  				<li class="active"><a href="./">Home</a></li>
+          <li class=""><a href="/blog">List of Bikes</a></li>
+          <li class=""><a href="/host">Become a host</a></li>
+  				<li class=""><a href="/about">About Us</a></li>
+  				<li class=""><a href="/contact">Contact Us</a></li>
+          <li><a href="/login" ><span class="fa fa-lock fa-lg"></span> Login</a></li>
+          <li><a href="/signup" ><span class="fa fa-user fa-lg"></span> Sign Up</a></li>
+        </ul>
+  			<div class="login-icon ml-2">
+  				<a class="user" href="contact.html"> Book Now</a>
+  			</div>
+  		</nav>
+  		<div class="clear"></div>
+  		<!-- //nav -->
+  	</div>
+  </header>
+<!-- banner -->
+<div class="innerpage-banner1" id="home">
+	<div class="inner-page-layer1">
+	</div>
+</div>
+<!-- //banner -->
+
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading"><center><b>Two Wheelers</b></center></div>
+    <div class="panel-body"><div id="demo"></div></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script>
+
+getBikes();
+
+
+ function getBikes() {
+        //send http request to our server
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "/getBikes");
+        xmlhttp.setRequestHeader("Accept", "application/json");
+        xmlhttp.send();
+
+        // capture response from our server
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState === 4 && this.status === 200) {
+                let response = JSON.parse(this.responseText);
+                if (response.err) {
+                  let err = response.err;
+                  console.error("err", err)
+                  //displayErr(err)
+
+                } else {
+                  let bikes = response;
+                  console.log("bikes", bikes);
+                  displayBikes(bikes)
+
+                }
+
+
+            }
+        };
+    }
+
+    function displayBikes(bikes) {
+
+      let div = '';
+
+      bikes.map(bike => {
+
+      div +=    "<div class='col-md-3 col-sm-6' >"+
+              "<div class='product-grid3'>"+
+                  "<div class='product-image3'>"+
+                      "<a href='#'>"+
+                        "  <img class='pic-1' src='images/bk2.jpg'>"+
+                        "  <img class='pic-2' src='images/bk2.jpg'>"+
+                      "</a>"+
+                    "</div>"+
+                  "<div class='product-content'>"+
+                    "<h4>"+"model:"+bike.model+"</h4>"+
+
+                    "<h4>"+"price:2500 /day"+"</h4>"+
+                     "<p>"+"Available:"+bike.udate+"</p>"+
+
+                  "</div>"+
+                  "<a class='add-to-cart' href='single'>BOOK NOW</a>"+
+            "</div>"+
+        "</div>"
+      })
+       document.getElementById("demo").innerHTML = div
+
+    }
+
+</script>
+
+</body>
+</html>
